@@ -10,6 +10,17 @@
 
 <div class="container">
 
+    <div class=container-week> 
+        <h2>Deze week spelen</h2>
+
+     @php
+         
+        
+     $highlightTeams = ['France', 'Marocco']
+    @endphp
+
+    </div>
+
     <h1> WK 2026 Wedstrijden</h1>
 
     @php

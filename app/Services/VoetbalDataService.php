@@ -31,8 +31,16 @@ class VoetbalDataService
                 'season' => $season,
             ]);
 
-        return $response->json('matches');
+         $matches =  $response->json('matches');
+
+         // DEBUG EXPORT API DATA
+         file_put_contents(
+            storage_path('app/debug-matches.json'),
+            json_encode($matches, JSON_PRETTY_PRINT)
+         ); 
+         return $matches; 
     }
 
-
+    
 }
+    
